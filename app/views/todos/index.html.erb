@@ -1,5 +1,9 @@
 <h1> Listing All ToDos </h1>
 
+<p>
+  <%= link_to "Create a Todo", new_todo_path %>
+</p>
+
 <table>
   <tr>
     <th>Name</th>
@@ -9,6 +13,8 @@
     <tr>
       <td> <%= todo.name %> </td>
       <td> <%= todo.description %> </td>
+      <td> <%= link_to "Edit", edit_todo_path(todo) %></td>
+      <td> <%= link_to "Show", todo_path(todo) %></td>
     </tr>
   <% end %>
 
